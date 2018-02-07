@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>8-bit games music</title>
+  <link rel="stylesheet" href="css/app.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+</head>
+<body>
+  <div class="screen">
+    <div class="container">
+      <div class="visuals">
+        <div class="tv">
+          <video width="324" height="282" loop>
+            <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/355309/8-bit-zelda.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="analysers">
+          <div><span>pulse 1</span><canvas id="pulse" width="182" height="60"></canvas></div>
+          <div><span>pulse 2</span><canvas id="square" width="182" height="60"></canvas></div>
+          <div><span>triangle</span><canvas id="triangle" width="182" height="60"></canvas></div>
+          <div><span>noise</span><canvas id="noise" width="182" height="60"></canvas></div>
+        </div>
+      </div>
+      <div class="playlist">
+        <a class="song active" data-index="0">Ode To Joy</a>
+        <a class="song" data-index="1">Super Mario Bros (overworld)</a>
+        <a class="song" data-index="2">The Legend of Zelda (overworld)</a>
+        <a class="song" data-index="3">Pac-Man (intro)</a>
+      </div>
+      <div class="play-wrapper">
+        <a class="play">Play</a>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/0.9.0/Tone.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.9.0/math.min.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/visualize.js"></script>
+  <script src="js/options.js"></script>
+  <script src="js/notes/odetojoy/bass1.js"></script>
+  <script src="js/notes/odetojoy/synth1.js"></script>
+  <script src="js/notes/zelda/bass1.js"></script>
+  <script src="js/notes/zelda/bass2.js"></script>
+  <script src="js/notes/zelda/synth1.js"></script>
+  <script src="js/notes/zelda/synth2.js"></script>
+  <script src="js/notes/pacman/bass1.js"></script>
+  <script src="js/notes/pacman/synth1.js"></script>
+  <script src="js/notes/mario/synth1.js"></script>
+  <script src="js/notes/mario/synth2.js"></script>
+  <script src="js/notes/mario/bass1.js"></script>
+  <script src="js/notes/mario/bass2.js"></script>
+  <script src="js/songs.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
