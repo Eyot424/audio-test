@@ -34,9 +34,9 @@ function drawWave (context, values, gradient) {
   context.lineWidth = 1
   context.strokeStyle = gradient
 
-  context.moveTo(0, (values[0] / 255) * canvasHeight)
+  context.moveTo(0, (values[0] + 0.5) * canvasHeight)
   for (var i = 1, len = values.length; i < len; i++) {
-    var val = values[i] / 255
+    var val = values[i] + 0.5
     var x = canvasWidth * (i / len)
     var y = val * canvasHeight
     context.lineTo(x, y)
@@ -46,8 +46,8 @@ function drawWave (context, values, gradient) {
 
 function visualize () {
   requestAnimationFrame(visualize)
-  drawWave(pulseContext, pulseAnalyser.analyse(), pulseGradient)
-  drawWave(squareContext, squareAnalyser.analyse(), squareGradient)
-  drawWave(triangleContext, triangleAnalyser.analyse(), triangleGradient)
-  drawWave(noiseContext, noiseAnalyser.analyse(), noiseGradient)
+  drawWave(pulseContext, pulseAnalyser.getValue(), pulseGradient)
+  drawWave(squareContext, squareAnalyser.getValue(), squareGradient)
+  drawWave(triangleContext, triangleAnalyser.getValue(), triangleGradient)
+  drawWave(noiseContext, noiseAnalyser.getValue(), noiseGradient)
 }

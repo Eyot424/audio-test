@@ -1,7 +1,7 @@
-var pulseSynth = new Tone.Synth(pulseOptions).fan(pulseAnalyser).toMaster()
-var squareSynth = new Tone.Synth(squareOptions).fan(squareAnalyser).toMaster()
-var triangleSynth = new Tone.Synth(triangleOptions).fan(triangleAnalyser).toMaster()
-var noiseSynth = new Tone.NoiseSynth().fan(noiseAnalyser).toMaster()
+var pulseSynth = new Tone.Synth(pulseOptions).connect(pulseAnalyser).toMaster()
+var squareSynth = new Tone.Synth(squareOptions).connect(squareAnalyser).toMaster()
+var triangleSynth = new Tone.Synth(triangleOptions).connect(triangleAnalyser).toMaster()
+var noiseSynth = new Tone.NoiseSynth().connect(noiseAnalyser).toMaster()
 
 var song = {}
 var pulsePart = new Tone.Part()

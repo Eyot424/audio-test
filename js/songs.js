@@ -1,10 +1,10 @@
 var songs = [
   {
-    'pulse': filterNotes(OdetojoySynth1).notes,
-    'square': null,
+    'pulse': null,
+    'square': filterNotes(OdetojoySynth1).notes,
     'triangle': filterNotes(OdetojoyBass1).notes,
     'noise': null,
-    'length': '16m',
+    'length': '32m',
     'video': ''
   },
   {
